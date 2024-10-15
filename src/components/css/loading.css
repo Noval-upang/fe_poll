@@ -1,0 +1,11 @@
+/* HTML: <div class="loader"></div> */
+.loading {
+    aspect-ratio: 1;
+    animation: ani 1.5s infinite linear;
+}
+
+@keyframes ani {
+    to {
+        transform: rotate(1turn);
+    }
+}
