@@ -39,6 +39,7 @@ export default () => {
             <div className="flex flex-col md:flex-row">
                <Middle />
                <CalculationSales />
+               w
             </div>
             <Shift/>
          </ExpenditureCtxt.Provider>
