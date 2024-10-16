@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
 
 
@@ -18,3 +19,6 @@
   font-style: normal;
 }
 
+=======
+@tailwind utilities;
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379

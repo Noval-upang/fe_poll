@@ -2,9 +2,19 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+<<<<<<< HEAD
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+=======
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"]
+    },
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -13,6 +23,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "preact",
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
 
     /* Linting */
     "strict": true,

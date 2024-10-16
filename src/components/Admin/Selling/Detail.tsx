@@ -1,5 +1,4 @@
 import { useSignal } from "@preact/signals-react"
-import { useMetaData } from "../../All/Selling"
 import {   Css, DB, Func } from "../../helpers/init"
 import { useParams } from "react-router-dom"
 

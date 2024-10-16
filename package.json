@@ -1,11 +1,16 @@
 {
+<<<<<<< HEAD
   "name": "pll-react",
+=======
+  "name": "poll",
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+<<<<<<< HEAD
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -36,5 +41,22 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
+=======
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@preact/signals": "^1.2.2",
+    "axios": "^1.6.5",
+    "preact": "^10.19.3",
+    "preact-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.7.0",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
   }
 }

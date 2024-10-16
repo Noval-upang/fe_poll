@@ -1,4 +1,5 @@
 import axios from "axios"
+<<<<<<< HEAD
 
 type GroupBy = "today" | "daily" | "monthly"|"year"
 
@@ -11,10 +12,17 @@ export namespace Constants {
       AuthURL = `http://${Url}/auth`,
       CompanyURL = AuthURL + "/company",
       ICON = "material-symbols-outlined "
+=======
+import { ComponentChildren } from "preact"
+
+export namespace Constants {
+   export const API = axios.create({baseURL:import.meta.env.API})
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
 }
 
 export namespace Func {
    export const 
+<<<<<<< HEAD
       setAuth = () => ({"Authorization": localStorage.getItem("token")}),
 
       post = function<T>(url:string, data:{}|{}[]) {
@@ -89,6 +97,23 @@ export namespace Func {
          window.screen.width < 1024
       
    }
+=======
+      setAuth = () => ({"Authorization": localStorage.getItem("auth")}),
+      post = function<T>(url:string, data:{}|{}[]) {
+         return Constants.API.post<T>(url, data, {headers:{"Content-Type":"application/json", ...setAuth()}})
+      },
+      get = function<T>(url:string) {
+         return Constants.API.get<T>(url, {headers:setAuth()})
+      },
+      patch = (url:string) =>
+         Constants.API.patch(url, {headers:setAuth()})
+      ,
+      getValue = (e: any) => e.target.value ,
+      getResponse = (e:any) => e.response.data
+
+}
+
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
 export namespace DB {
    type ID = {id:number}
 
@@ -112,6 +137,7 @@ export namespace DB {
    export type Product = ID & {
       id_company:number
       name:string
+<<<<<<< HEAD
       qty: number
       category:string
       price:number
@@ -134,10 +160,14 @@ export namespace DB {
    }
 
    export type SellingList = ID & {
+=======
+      category:string
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
       qty:number
       price:number
    }
 
+<<<<<<< HEAD
    export type Expenditure = ID & {
       id_company:number
       /**
@@ -154,23 +184,48 @@ export namespace DB {
       todo:string
       descript:string
       total:number
+=======
+   export type Selling = ID & {
+      id_worker:number
+      productList: string
+      provit:number
+      date:string
+   }
+
+   export type SellingList = {
+      id:number
+      qty:number
+      price:number
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
    }
 }
 
 export namespace Types {
+<<<<<<< HEAD
    export type Props<T extends {} = {}> = T & {children : React.ReactNode}
+=======
+   export type Props<T extends {} = {}> = T & {children : ComponentChildren}
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
    export type Cookie = {
       user:DB.User,
       expired: string
    }
+<<<<<<< HEAD
    export type Setter<T> = React.Dispatch<React.SetStateAction<T>>
+=======
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
 }
 
 export namespace Css {
    export const 
+<<<<<<< HEAD
       gridC = "grid place-items-center ",
       icon = "material-symbols-outlined ",
       ColorSelected = "#3db788"
+=======
+      gridC = "grid items-center "
+
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
 }
 
 export namespace Shared {
@@ -178,4 +233,8 @@ export namespace Shared {
       selling: DB.Selling[]
       product:DB.Product[]
    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 992e7b7bb807183f890b69d20ef12a790b435379
